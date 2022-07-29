@@ -1,0 +1,91 @@
+<!-- {% if page.layout == "home-infographic" and site.data.theme.featured-image %}
+<style>
+.title-card {
+    background-color: #25242485;
+    background-color: rgba(37, 36, 36, 0.72);
+    color: white !important;
+}
+.featured-link {
+    background:rgba(0,0,0,.5);
+}
+#home-banner {
+    background-image: url('{% include image/featured-image.html %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: {{ site.data.theme.home-banner-image-position | default: 'center' }};
+}
+#home-title-box {
+    padding-top: {{ site.data.theme.home-title-y-padding | default: '5em' }};
+    padding-bottom: {{ site.data.theme.home-title-y-padding | default: '5em' }};
+}
+@media screen and (max-width: 576px) {
+    #home-banner { max-height:500px; }
+    #home-title-box {
+        padding-top: 5em;
+        padding-bottom: 5em; 
+    }
+    .display-4 { font-size:1.75em; }
+    #home-tagline { font-size:.85em; }
+}
+</style>
+<div id="home-banner" class="container-fluid mb-0 p-0">
+    <div id="home-title-box" >
+        <div class="title-card p-2 text-center">
+            <h1 class="display-4">{{ site.title }}</h1>
+            {% if site.tagline %}<p class="mb-0">{{ site.tagline }}</p>{% endif %}
+        </div>
+    </div>
+    {% unless site.data.theme.featured-image contains '/' %}<div class="text-right p-0 mt-0">
+        <small><a class="text-info featured-link p-2" href="{{ site.data.theme.featured-image | prepend: '/item.html?id=' | relative_url }}" title="{{ featuredItem.title | escape }}">Featured Image</a></small>
+    </div>{% endunless %}
+</div>
+{%- else -%}
+<div class="container pt-2">
+    <h1><a class="text-dark font-weight-normal" href="{{ site.baseurl }}/" >{{ site.title }}</a></h1>	 
+            {% if site.tagline %}<p>{{ site.tagline }}</p>{% endif %}
+</div>
+{%- endif -%} -->
+
+  <div id="header-navbar" class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation" style="background:#222">
+  <div class="container">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="https://library.uoregon.edu/">
+        <img src="{{ '/assets/img/uolib-logo-d6bbb9e7c6712b462e43b2689e652849f8d70f76b56042af3cded0d1b9b25084.png' | relative_url }}" style="height:45px;">
+    </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="user-util-collapse">
+      <div class="navbar-right">
+
+  <ul class="nav navbar-nav">
+      <li><a href="https://expo.uoregon.edu/">Digital Exhibits</a></li>
+  </ul>
+
+  <ul class="nav navbar-nav">
+    
+      <li>
+        <a href="https://expo.uoregon.edu/users/sign_in">Sign in</a>
+      </li>
+  </ul>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="masthead image-masthead" style="background-image: url('{{ site.data.theme.featured-image }}')">
+    <span class='background-container'></span>
+    <span class='background-container-gradient'></span>
+
+  
+
+  <div class="container site-title-container">
+    <div class="site-title h1">
+        {{ site.data.theme.header-main-title }}
+        <br>
+        <small>{{ site.data.theme.header-secondary-title }}</small>
+    </div>
+  </div>
+
+</div>
